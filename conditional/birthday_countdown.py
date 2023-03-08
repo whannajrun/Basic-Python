@@ -34,14 +34,14 @@ dt_now = datetime.now()
 
 dt = datetime(dt_now.year,birthday_month, birthday_day)
 
-next_age = dt_now.year-birthday_year
+age = dt_now.year-birthday_year
 
 if (dt.month, dt.day) <= (dt_now.month, dt_now.day):
-  next_age += 1
+  age += 1
   days_left = (datetime(dt_now.year+1, dt_now.month, dt_now.day) - dt).days+1
 else:
   days_left = (dt-dt_now).days+1
 
 
 print("Hello, Ms.", last_name, 
-     "\nIt's", days_left, "days left before your",next_age,"birthday")
+     "\nIt's", days_left, "days left before your",age,"birthday")
